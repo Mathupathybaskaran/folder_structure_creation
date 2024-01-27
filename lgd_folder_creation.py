@@ -16,12 +16,12 @@ for index, column in df.iterrows():
     district_name = str(column['District Name'])
     taluk_name = str(column['Taluk Name'])
 
-    if not district_code:
-        district_code = district_name
-    #if not taluk_code:
-        #taluk_code = taluk_name
-    #if not village_code:
-        #village_code = village_name
+    if not district_name:
+        district_name = district_code
+    if not taluk_name:
+        taluk_name = taluk_code
+    if not village_name:
+        village_name = village_code
 
     district_folder = os.path.join(base_folder, 'districts', district_name)
     #taluk_folder = os.path.join(district_folder, taluk_name)
